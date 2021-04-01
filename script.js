@@ -16,7 +16,7 @@ var paddleX = (canvas.width-paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
 
-var brickRowCount = 7;
+var brickRowCount = 3;
 var brickColumnCount = 5;
 var brickWidth = 75;
 var brickHeight = 20;
@@ -56,9 +56,9 @@ function collisionBall () {
         else {
             lives--;
             if(!lives) {
-                alert("GAME OVER");
+                // alert("GAME OVER");
                 document.location.reload();
-                clearInterval(interval); // Needed for Chrome to end game
+                clearInterval(interval);
             }
             else {
                 x = canvas.width/2;
@@ -195,3 +195,5 @@ function draw() {
 }
 
 draw();
+
+
